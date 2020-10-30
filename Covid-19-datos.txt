@@ -1,0 +1,30 @@
+10
+Sebastian, 5, 2
+Fiebre
+Tos
+Felipe, 10, 3
+Fiebre
+Tos
+Debilidad
+Daniel, 15, 1
+Tos
+Juan, 20, 2
+Fiebre
+Debilidad
+Sergio, 20, 2
+Debilidad
+Tos
+Roberto, 1, 1
+Debilidad
+Juaquin, 50, 3
+Fiebre
+Tos
+Debilidad
+Eustacio, 5, 1
+Tos
+Alejandro, 7, 1
+Fiebre
+Manuel, 16, 3
+Fiebre
+Tos
+Debilidad

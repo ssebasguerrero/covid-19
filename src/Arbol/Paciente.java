@@ -6,7 +6,7 @@ public class Paciente {
 	int codigo;
 	ListaSintoma listaSintomas;
 	
-	int vlrxSintomas;
+	int totalPagar;
 	
 	public Paciente(String nombre, int codigo) {
 		this.nombre = nombre;
@@ -30,8 +30,7 @@ public class Paciente {
 		}
 	}
 	
-	public void totalSintomas (int cantSintomas)
-	{
-		vlrxSintomas = cantSintomas * 100;
-	}
+	
+	
+	
 }

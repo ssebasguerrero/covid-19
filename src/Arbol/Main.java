@@ -19,7 +19,6 @@ public class Main {
 			arrPaciente = bf.readLine().split(", ");
 			Paciente paciente = new Paciente(arrPaciente[0], Integer.parseInt(arrPaciente[1]));
 			int cantSintomas = Integer.parseInt(arrPaciente[2]);
-			//paciente.totalSintomas(cantSintomas);
 			for (int j = 0; j < cantSintomas; j++) {
 				Sintoma = bf.readLine().split(", ");
 				Sintoma sintoma = new Sintoma(Sintoma[0]);
@@ -33,11 +32,28 @@ public class Main {
 		ar.mostrarArbol(ar.root);
 		
 		// 3. Mostrar sintomas de pacientes
-		System.out.println("------  ------");
-		int codigoPacienteBuscar = 20;
+		System.out.println("------ Sintomas del paciente ------");
+		int codigoPacienteBuscar = 5;
 		Paciente p = ar.buscador(codigoPacienteBuscar);
-		System.out.print("Los sintomas del paciente " + p.nombre + " son: \n");
+		System.out.println("Los sintomas del paciente " + p.nombre + " son:");
 		p.mostrarSintomas(p.listaSintomas);
+		
+		// 4. Precio a pagar por sintomas
+		System.out.println("------ Precio a pagar ------");
+		ar.totalPagar(ar.root);
+		
+		// 5. Requerimientos varios
+		System.out.println("------ Informacion del sistema ------");
+		// a. Cuantos pacientes tienen fiebre
+		//ar.contarPacientesSintomas(ar.root, "Fiebre");
+		// b.
+		// c. Promedio de pago de todos los pacientes
+		System.out.println("El promedio de pago de los pacientes es: " + ar.promedio / ar.cont);
+		// d. Paciente con el sintoma mas grande
+		System.out.println(ar.mayor);
+		ar.encontrarPacienteMayorSintomas(ar.root);
+		
+		
 	}
 
 }

@@ -93,4 +93,98 @@ public class Arbol {
 			mostrarArbol(root.derecha);
 		}
 	}
+    
+    
+    public int cantidadSintomas (ListaSintoma l) 
+	{
+		int cont = 0;
+		NodoLista tmp = l.head;
+		while(tmp != null)
+		{
+			cont += 1; 
+			tmp = tmp.next;
+		}
+		return cont;
+	}
+    
+    int promedio;
+    int cont;
+    public void totalPagar (Nodo root) 
+    {
+    	Paciente p = new Paciente(root.paciente.nombre, root.paciente.codigo);
+    	
+		int cantSintomas = cantidadSintomas(root.paciente.listaSintomas);
+		int total = cantSintomas * 100;
+		System.out.println("El paciente " + root.paciente.nombre + " tiene " 
+		+ cantSintomas + " sintoma (s)\n total a pagar: " + total);
+		
+		promedio = p.totalPagar += total;
+		cont += 1;
+		
+    	if (root.izquierda != null) {
+			totalPagar(root.izquierda);
+		}
+    	if (root.derecha != null) {
+			totalPagar(root.derecha);
+		}
+	}
+    
+    int mayor;
+    public void mayorCantSintoma (Nodo root) 
+    {    	
+    	if (cantidadSintomas(root.paciente.listaSintomas) > mayor) {
+			mayor = cantidadSintomas(root.paciente.listaSintomas);
+		}
+    	
+    	if (root.izquierda != null) {
+			mayorCantSintoma(root.izquierda);
+		}
+    	if (root.derecha != null) {
+			mayorCantSintoma(root.derecha);
+		}
+	}
+    
+    public void encontrarPacienteMayorSintomas (Nodo root) 
+    {
+		if (mayor == cantidadSintomas(root.paciente.listaSintomas)) {
+			System.out.println("El paciente "+ root.paciente.nombre 
+					+" tiene el mayor numero de sintomas ("+cantidadSintomas(root.paciente.listaSintomas)+")");
+		}
+		
+		if (root.izquierda != null) {
+			encontrarPacienteMayorSintomas(root.izquierda);
+		}
+		if (root.derecha != null) {
+			encontrarPacienteMayorSintomas(root.derecha);
+		}
+	}
+    /*
+    public int contarSintoma (ListaSintoma l, String sintoma) 
+    {
+		int contador = 0;
+		NodoLista tmp = l.head;
+		while(tmp != null) {
+			if (tmp.sintoma.nombre.equals(sintoma)) {
+				contador += 1;
+			}
+			tmp = tmp.next;
+		}
+		return contador;
+	}
+    public void contarPacientesSintomas (Nodo root, String sintoma) 
+    {
+		int contador = 0;
+		contador += contarSintoma(root.paciente.listaSintomas, sintoma);
+		
+		if (root.izquierda != null) {
+			contarPacientesSintomas(root.izquierda, sintoma);
+		}
+		if (root.derecha != null) {
+			contarPacientesSintomas(root.derecha, sintoma);
+		}
+		if (root.izquierda == null && root.derecha == null) {
+			System.out.println("Los pacientes con "+ sintoma +" son: "+ contador);
+		}
+	}
+    */
 }

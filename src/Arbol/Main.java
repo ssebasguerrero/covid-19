@@ -45,13 +45,15 @@ public class Main {
 		// 5. Requerimientos varios
 		System.out.println("------ Informacion del sistema ------");
 		// a. Cuantos pacientes tienen fiebre
-		//ar.contarPacientesSintomas(ar.root, "Fiebre");
-		// b.
+		//String sintoma = "Fiebre";
+		//System.out.println(ar.contador);
+		//ar.contarSintomasPacientes(ar.root, sintoma, 0);
+		// b. Sintoma mas comun
 		// c. Promedio de pago de todos los pacientes
 		System.out.println("El promedio de pago de los pacientes es: " + ar.promedio / ar.cont);
 		// d. Paciente con el sintoma mas grande
-		System.out.println(ar.mayor);
-		ar.encontrarPacienteMayorSintomas(ar.root);
+		//System.out.println(ar.mayor);
+		//ar.encontrarPacienteMayorSintomas(ar.root);
 		
 		
 	}

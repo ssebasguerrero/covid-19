@@ -6,8 +6,6 @@ public class Paciente {
 	int codigo;
 	ListaSintoma listaSintomas;
 	
-	int totalPagar;
-	
 	public Paciente(String nombre, int codigo) {
 		this.nombre = nombre;
 		this.codigo = codigo;

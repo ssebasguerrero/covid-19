@@ -46,6 +46,7 @@ public class Arbol {
 			{
 				añadirPaciente(root.izquierda, nuevoPaciente);
 			}
+			
 		
 		}
 	}
@@ -116,9 +117,9 @@ public class Arbol {
 		int cantSintomas = cantidadSintomas(root.paciente.listaSintomas);
 		int total = cantSintomas * 100;
 		System.out.println("El paciente " + root.paciente.nombre + " tiene " 
-		+ cantSintomas + " sintoma (s)\n total a pagar: " + total);
+		+ cantSintomas + " sintoma (s)\n total a pagar: $" + total);
 		
-		promedio = p.totalPagar += total;
+		promedio += total;
 		cont += 1;
 		
     	if (root.izquierda != null) {
@@ -129,6 +130,7 @@ public class Arbol {
 		}
 	}
     
+    /* Cuarto del quinto 
     int mayor;
     public void mayorCantSintoma (Nodo root) 
     {    	
@@ -158,33 +160,31 @@ public class Arbol {
 			encontrarPacienteMayorSintomas(root.derecha);
 		}
 	}
-    /*
-    public int contarSintoma (ListaSintoma l, String sintoma) 
+     Primero del quinto
+    public int encontarSintoma (ListaSintoma l, String sintoma) 
     {
-		int contador = 0;
+    	int contador = 0;
 		NodoLista tmp = l.head;
 		while(tmp != null) {
 			if (tmp.sintoma.nombre.equals(sintoma)) {
-				contador += 1;
+				contador++;
 			}
 			tmp = tmp.next;
 		}
 		return contador;
 	}
-    public void contarPacientesSintomas (Nodo root, String sintoma) 
+    
+    public void contarSintomasPacientes (Nodo root, String sintoma, int contador) 
     {
-		int contador = 0;
-		contador += contarSintoma(root.paciente.listaSintomas, sintoma);
+		contador += encontarSintoma(root.paciente.listaSintomas, sintoma);
 		
 		if (root.izquierda != null) {
-			contarPacientesSintomas(root.izquierda, sintoma);
+			contarSintomasPacientes(root.izquierda, sintoma, contador);
 		}
 		if (root.derecha != null) {
-			contarPacientesSintomas(root.derecha, sintoma);
+			contarSintomasPacientes(root.derecha, sintoma, contador);
 		}
-		if (root.izquierda == null && root.derecha == null) {
-			System.out.println("Los pacientes con "+ sintoma +" son: "+ contador);
-		}
+		
 	}
     */
 }
